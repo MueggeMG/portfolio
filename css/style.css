@@ -1,78 +1,5 @@
-/* ALLGEMEIN */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --gold: #c9a84c;
-  --gold-light: #e8c97a;
-  --gold-dim: rgba(201, 168, 76, 0.15);
-  --white: #f5f3ee;
-  --black: #0a0a0a;
-  --gray: #888888;
-  --border: rgba(201, 168, 76, 0.25);
-}
-
-body {
-  background-color: var(--black);
-  color: var(--white);
-  font-family: 'DM Mono', monospace;
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* NAV */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px 60px;
-  z-index: 100;
-  transition:
-    border-color 0.4s,
-    background 0.4s;
-}
-
-.nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 20px;
-  letter-spacing: 0.08em;
-  color: var(--gold);
-}
-
-.nav-links {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-}
-
-.nav-links a {
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gray);
-  text-decoration: none;
-  transition: color 0.6s;
-}
-
-.nav-links a:hover {
-  color: var(--gold);
-}
-
-nav.scrolled {
-  border-bottom: 1px solid var(--border);
-  background: rgba(10, 10, 10, 0.92);
-}
+/* IMPORT BASE CSS */
+@import url('base.css');
 
 /* ICH */
 #me {
@@ -434,60 +361,8 @@ section.visible {
   color: var(--gold);
 }
 
-/* FOOTER */
-footer {
-  padding: 32px 60px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gray);
-}
-
-/* CUSTOM CURSOR */
-.cursor {
-  width: 8px;
-  height: 8px;
-  background: var(--gold);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  transition:
-    width 0.2s,
-    height 0.2s;
-}
-
-.cursor.grow {
-  width: 40px;
-  height: 40px;
-  margin-left: -16px;
-  margin-top: -16px;
-  background: transparent;
-  border: 1px solid var(--gold);
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  /* NAV */
-  nav {
-    padding: 20px 24px;
-  }
-
-  .nav-links {
-    gap: 12px;
-  }
-
-  .nav-links a {
-    font-size: 9px;
-    letter-spacing: 0.08em;
-  }
-
   /* ICH */
   #me {
     padding: 0 24px;
@@ -542,13 +417,5 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 24px;
-  }
-
-  /* FOOTER */
-  footer {
-    padding: 24px;
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
   }
 }
