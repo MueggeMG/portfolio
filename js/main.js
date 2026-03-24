@@ -20,7 +20,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 },
+  { threshold: 0.3 },
 );
 
 revealElements.forEach((el) => {
