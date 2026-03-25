@@ -14,3 +14,11 @@ const observer = new IntersectionObserver(
 revealElements.forEach((el) => {
   observer.observe(el);
 });
+
+// Custom Cursor//
+document
+  .querySelectorAll('.project-item, .skill-card, .stat-box')
+  .forEach((el) => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
+  });

@@ -30,9 +30,7 @@ function animateCursor() {
 
 animateCursor();
 
-document
-  .querySelectorAll('a, button, .project-item, .skill-card, .stat-box')
-  .forEach((el) => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
-  });
+document.querySelectorAll('a, button').forEach((el) => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
+});
