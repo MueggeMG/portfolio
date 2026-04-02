@@ -419,3 +419,9 @@ section.visible {
     gap: 24px;
   }
 }
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
