@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess 2.0 – Projektdokumentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/chess-info.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Hintergrund SVG — Schachbrett Muster -->
+    <svg id="bg-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <pattern id="chess-pattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="40" height="40" fill="#c9a84c" />
+                <rect x="40" y="40" width="40" height="40" fill="#c9a84c" />
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#chess-pattern)" />
+    </svg>
+
+    <!-- Nav -->
+    <nav id="mainNav">
+        <a href="../index.html" class="nav-logo">MG</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">← Portfolio</a></li>
+            <li><a href="../index.html#projects">Projekte</a></li>
+            <li><a href="../index.html#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="hero" style="opacity:1;transform:none;">
+            <p class="hero-label">03 — Projekt · Schach & KI</p>
+            <h1 class="hero-title">
+                <em>Schach</em>
+            </h1>
+            <p class="hero-sub">
+                Ein vollständiges Schachspiel gegen die Stockfish Engine —
+                gebaut um echte Webentwicklung zu lernen, nicht um Code zu kopieren.
+            </p>
+            <div class="hero-cta">
+                <a href="https://mueggemg.github.io/chess" class="btn-primary">Jetzt spielen →</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">4</span>
+                    <span class="hero-stat-label">Schwierigkeitsstufen</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">5+</span>
+                    <span class="hero-stat-label">Tools & Libraries</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">∞</span>
+                    <span class="hero-stat-label">Lerneffekt</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- WARUM -->
+        <section id="why">
+            <p class="section-label">01 — Motivation</p>
+            <h2 class="section-title">Warum dieses Projekt?</h2>
+            <div class="why-grid">
+                <div class="why-text">
+                    <p>
+                        Schach ist eines der komplexesten Spiele der Welt — gleichzeitig aber eines das sich
+                        perfekt eignet um echte Webentwicklung zu lernen. Es gibt klare Regeln, klare Zustände
+                        und ein greifbares Ergebnis.
+                    </p>
+                    <p>
+                        Ich wollte kein Tutorial nachbauen. Ich wollte verstehen wie eine Schach-Engine kommuniziert,
+                        wie man Spiellogik von Darstellung trennt, und wie man eine externe Library wie Stockfish
+                        in einem modernen Projekt einsetzt.
+                    </p>
+                </div>
+                <div>
+                    <div class="why-highlight">
+                        <p>
+                            <em>"Ich entwickle digitalen Fortschritt —
+                                präzise, modern und mit einem Blick für Details."</em>
+                        </p>
+                    </div>
+                    <div style="margin-top: 40px;">
+                        <div class="why-text">
+                            <p>
+                                Als Entwickler in Ausbildung war es mir wichtig ein Projekt zu bauen das über
+                                ein einfaches HTML/CSS Beispiel hinausgeht — mit echten Libraries, echtem Build-Tool
+                                und echtem Deployment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH STACK -->
+        <section id="tech">
+            <p class="section-label">02 — Tech Stack</p>
+            <h2 class="section-title">Was ich genutzt habe<br><em>und warum.</em></h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-category">Build Tool</div>
+                    <div class="tech-name">Vite</div>
+                    <p class="tech-why">
+                        <strong>Warum nicht plain HTML?</strong>
+                        Vite ermöglicht echte ES Module, Hot Reload und einen professionellen Build-Prozess.
+                        Genau das was in der echten Entwicklung genutzt wird.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Spiellogik</div>
+                    <div class="tech-name">chess.js</div>
+                    <p class="tech-why">
+                        <strong>Warum eine Library?</strong>
+                        Schachregeln selbst zu implementieren wäre Monate Arbeit.
+                        chess.js übernimmt Regelvalidierung, FEN-Notation und Spielzustand —
+                        ich konzentriere mich auf das Drumherum.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Brett & Figuren</div>
+                    <div class="tech-name">Chessground</div>
+                    <p class="tech-why">
+                        <strong>Warum Lichess' Library?</strong>
+                        Chessground ist das Brett hinter Lichess — einer der meistgespielten
+                        Schachplattformen der Welt. Bewährt, performant, erweiterbar.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">KI Engine</div>
+                    <div class="tech-name">Stockfish</div>
+                    <p class="tech-why">
+                        <strong>Warum Stockfish?</strong>
+                        Die stärkste Open-Source Schach-Engine. Läuft als Web Worker —
+                        ein separater Thread damit die Seite nicht einfriert.
+                        Kommunikation über das UCI Protokoll.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Deployment</div>
+                    <div class="tech-name">GitHub Pages</div>
+                    <p class="tech-why">
+                        <strong>Warum GitHub Actions?</strong>
+                        Automatisches Deployment bei jedem Push. Kein manuelles Hochladen —
+                        echter CI/CD Workflow wie in professionellen Teams.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Design</div>
+                    <div class="tech-name">Vanilla CSS</div>
+                    <p class="tech-why">
+                        <strong>Warum kein Framework?</strong>
+                        CSS wirklich zu verstehen ist wichtiger als Tailwind zu benutzen.
+                        CSS Variables, Grid, Flexbox — alles von Hand, alles verstanden.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAZIT -->
+        <section id="fazit">
+            <p class="section-label">03 — Reflexion</p>
+            <h2 class="section-title">Was ich mitgenommen habe.</h2>
+            <div class="fazit-grid">
+                <div class="fazit-text">
+                    <p>
+                        Dieses Projekt hat mir gezeigt wie viele Schichten ein modernes Webprojekt hat —
+                        von der Spiellogik über die Engine-Kommunikation bis zum Deployment.
+                    </p>
+                    <p>
+                        Der größte Lerneffekt war nicht der fertige Code,
+                        sondern der Weg dorthin. Jeden Fehler debuggen, jeden Begriff nachschlagen,
+                        jede Entscheidung bewusst treffen.
+                    </p>
+                    <p>
+                        Das Projekt ist nicht perfekt — aber es ist ehrlich.
+                        Jede Zeile wurde verstanden bevor sie geschrieben wurde.
+                    </p>
+                </div>
+                <div class="learnings">
+                    <div class="learning-item">
+                        <span class="learning-num">01</span>
+                        <div class="learning-text">
+                            <strong>Web Worker & Multithreading</strong>
+                            Wie man rechenintensive Aufgaben in einen separaten Thread auslagert
+                            damit die UI flüssig bleibt.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">02</span>
+                        <div class="learning-text">
+                            <strong>UCI Protokoll</strong>
+                            Wie Schach-Engines über ein Textprotokoll kommunizieren —
+                            ein echtes Industriestandard-Protokoll.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">03</span>
+                        <div class="learning-text">
+                            <strong>Vite & Build Tools</strong>
+                            Wie ein modernes Build-Tool funktioniert und warum
+                            es in der professionellen Entwicklung unersetzlich ist.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">04</span>
+                        <div class="learning-text">
+                            <strong>GitHub Actions & CI/CD</strong>
+                            Wie automatisches Deployment funktioniert —
+                            Push, Build, Deploy in einem Workflow.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">05</span>
+                        <div class="learning-text">
+                            <strong>Separation of Concerns</strong>
+                            Spiellogik, Darstellung und Engine konsequent
+                            voneinander zu trennen.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="play" style="border-bottom: none;">
+            <h2 class="cta-title">
+                Bereit für eine<br>
+                Partie <em>Schach?</em>
+            </h2>
+            <a href="https://mueggemg.github.io/chess" class="btn-primary">Jetzt spielen →</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>Marcel Graf © 2026</span>
+        <span>Chess 2.0 · Projektdokumentation</span>
+    </footer>
+
+    <script src="../js/base.js"></script>
+    <script src="../js/chess-info.js"></script>
+
+</body>
+
+</html>
