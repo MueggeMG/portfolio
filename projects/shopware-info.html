@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopware – Projektdokumentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/shopware-info.css" />
+</head>
+
+<body>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Hintergrund — Punkte-Raster -->
+    <svg id="bg-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <pattern id="dot-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <circle cx="20" cy="20" r="1" fill="#c9a84c" />
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#dot-pattern)" />
+    </svg>
+
+    <!-- Nav -->
+    <nav id="mainNav">
+        <a href="../index.html" class="nav-logo">MG</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">← Portfolio</a></li>
+            <li><a href="../index.html#projects">Projekte</a></li>
+            <li><a href="../index.html#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="hero" style="opacity:1;transform:none;">
+            <p class="hero-label">03 — Projekt · E-Commerce</p>
+            <h1 class="hero-title">
+                Shopware<br>
+                <em>Entwicklung.</em>
+            </h1>
+            <p class="hero-sub">
+                Mein erster echter Code — direkt ins kalte Wasser geworfen,
+                mit echten Kunden, echten Tickets und echten Anforderungen.
+            </p>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">1.</span>
+                    <span class="hero-stat-label">Projekt überhaupt</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">2×</span>
+                    <span class="hero-stat-label">Ticket-Arten</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">∞</span>
+                    <span class="hero-stat-label">Lerneffekt</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTEXT -->
+        <section id="context">
+            <p class="section-label">01 — Kontext</p>
+            <h2 class="section-title">Wie es dazu kam.</h2>
+            <div class="why-grid">
+                <div class="why-text">
+                    <p>
+                        Das war buchstäblich mein erster Kontakt mit Code überhaupt.
+                        Kein Vorkurs, kein Tutorial — direkt in ein laufendes Projekt,
+                        mit echten Kunden und echten Deadlines.
+                    </p>
+                    <p>
+                        Meine Firma hatte bereits vor meinem Start ein eigenes
+                        Shopware Theme Plugin entwickelt. Meine Aufgabe war es,
+                        dieses Plugin weiterzuentwickeln, zu pflegen und auf
+                        Kundenwünsche zu reagieren.
+                    </p>
+                    <p>
+                        Was mir damals fehlte war die Zeit um wirklich tief einzutauchen —
+                        die Struktur von Shopware, Twig als Template-Engine, das Plugin-System.
+                        Ich habe vieles im Schnelldurchlauf gelernt, aber genug um
+                        produktiv zu sein und echten Mehrwert zu liefern.
+                    </p>
+                </div>
+                <div>
+                    <div class="why-highlight">
+                        <p>
+                            <em>"Ins kalte Wasser geworfen zu werden ist
+                                die intensivste Art zu lernen — und die ehrlichste."</em>
+                        </p>
+                    </div>
+                    <div style="margin-top: 40px;">
+                        <div class="why-text">
+                            <p>
+                                Zwei Arten von Arbeit haben meinen Alltag geprägt:
+                                allgemeine Plugin-Tickets für das Theme selbst,
+                                und Kundentickets mit spezifischen Anpassungswünschen.
+                                Beides gleichzeitig — beides zum ersten Mal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WAS ICH GEMACHT HABE -->
+        <section id="work">
+            <p class="section-label">02 — Meine Arbeit</p>
+            <h2 class="section-title">Was ich konkret<br><em>umgesetzt habe.</em></h2>
+            <div class="work-grid">
+                <div class="work-card">
+                    <div class="work-category">Admin · Konfiguration</div>
+                    <div class="work-name">Textgrößen</div>
+                    <p class="work-desc">
+                        Textgrößen im Adminbereich des Plugins konfigurierbar gemacht —
+                        Shopbetreiber können Schriftgrößen direkt im Backend anpassen,
+                        ohne in den Code eingreifen zu müssen.
+                    </p>
+                </div>
+                <div class="work-card">
+                    <div class="work-category">Admin · Konfiguration</div>
+                    <div class="work-name">Header-Anordnung</div>
+                    <p class="work-desc">
+                        Die Anordnung von Elementen im Header flexibel gestaltet —
+                        Logo, Navigation und Suchfeld per Admin-Einstellung
+                        verschiebbar und konfigurierbar.
+                    </p>
+                </div>
+                <div class="work-card">
+                    <div class="work-category">Inhalte · Texte</div>
+                    <div class="work-name">Textbausteine</div>
+                    <p class="work-desc">
+                        Textbausteine für UI-Elemente wie den Einkaufskorb anpassbar gemacht —
+                        Labels, Hinweistexte und Beschriftungen über das
+                        Shopware Snippet-System editierbar.
+                    </p>
+                </div>
+                <div class="work-card">
+                    <div class="work-category">Design · Farben</div>
+                    <div class="work-name">Farbeinstellungen</div>
+                    <p class="work-desc">
+                        Ein eigenes Farbsystem im Plugin implementiert —
+                        inklusive Farbverläufen. Shopbetreiber können ihre
+                        Corporate Colors direkt im Adminbereich setzen.
+                    </p>
+                </div>
+                <div class="work-card">
+                    <div class="work-category">Plugin · Wartung</div>
+                    <div class="work-name">Allgemeine Tickets</div>
+                    <p class="work-desc">
+                        Laufende Weiterentwicklung und Bugfixes am Theme Plugin —
+                        neue Features, Anpassungen an Shopware Updates,
+                        Code-Qualität und Kompatibilität.
+                    </p>
+                </div>
+                <div class="work-card">
+                    <div class="work-category">Kunden · Support</div>
+                    <div class="work-name">Kundentickets</div>
+                    <p class="work-desc">
+                        Individuelle Anpassungen für spezifische Kunden —
+                        direkte Kommunikation mit Anforderungen,
+                        schnelle Umsetzung unter realen Bedingungen.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH -->
+        <section id="tech">
+            <p class="section-label">03 — Technologien</p>
+            <h2 class="section-title">Womit ich gearbeitet habe.</h2>
+            <div class="tech-list">
+                <div class="tech-row">
+                    <div class="tech-left">
+                        <div class="tech-name">Shopware</div>
+                        <div class="tech-cat">E-Commerce Plattform</div>
+                    </div>
+                    <p class="tech-desc">
+                        PHP-basierte E-Commerce Plattform — eines der führenden
+                        Systeme im deutschen Markt. Plugin-System, Admin-API,
+                        Storefront und das zugrunde liegende Framework.
+                    </p>
+                </div>
+                <div class="tech-row">
+                    <div class="tech-left">
+                        <div class="tech-name">Twig</div>
+                        <div class="tech-cat">Template-Engine</div>
+                    </div>
+                    <p class="tech-desc">
+                        Shopwares Template-Engine für die Storefront.
+                        Vererbung, Blöcke, Variablen — HTML-Templates
+                        die dynamisch mit Daten befüllt werden.
+                    </p>
+                </div>
+                <div class="tech-row">
+                    <div class="tech-left">
+                        <div class="tech-name">CSS / SCSS</div>
+                        <div class="tech-cat">Styling</div>
+                    </div>
+                    <p class="tech-desc">
+                        Styling der Storefront und des Admin-Bereichs.
+                        SCSS als Präprozessor — Variablen, Nesting,
+                        Mixins für ein konsistentes Design-System.
+                    </p>
+                </div>
+                <div class="tech-row">
+                    <div class="tech-left">
+                        <div class="tech-name">JavaScript</div>
+                        <div class="tech-cat">Interaktion</div>
+                    </div>
+                    <p class="tech-desc">
+                        Frontend-Logik für interaktive Elemente —
+                        Shopwares eigenes Plugin-System für JS,
+                        DOM-Manipulation und Event-Handling.
+                    </p>
+                </div>
+                <div class="tech-row">
+                    <div class="tech-left">
+                        <div class="tech-name">PHP</div>
+                        <div class="tech-cat">Backend</div>
+                    </div>
+                    <p class="tech-desc">
+                        Grundkenntnisse durch die Plugin-Entwicklung —
+                        Plugin-Registrierung, Service-Definitionen
+                        und die Shopware-eigene Architektur.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAZIT -->
+        <section id="fazit">
+            <p class="section-label">04 — Reflexion</p>
+            <h2 class="section-title">Was ich mitgenommen habe.</h2>
+            <div class="fazit-grid">
+                <div class="fazit-text">
+                    <p>
+                        Shopware war mein Einstieg in die Entwicklung — ungeplant,
+                        unvorbereitet, aber rückblickend genau richtig.
+                        Kein Tutorial kann das ersetzen was man lernt wenn
+                        echte Kunden auf Ergebnisse warten.
+                    </p>
+                    <p>
+                        Was mich am meisten fasziniert hat war die Struktur des
+                        Gesamtsystems — wie Plugin, Storefront, Admin und
+                        Backend zusammenhängen. Ich hätte gerne mehr Zeit
+                        gehabt um wirklich in die Tiefe zu gehen.
+                    </p>
+                    <p>
+                        Diese Erfahrung hat mir gezeigt dass ich auch unter Druck
+                        liefern kann — und dass der beste Weg zu lernen
+                        manchmal einfach machen ist.
+                    </p>
+                </div>
+                <div class="learnings">
+                    <div class="learning-item">
+                        <span class="learning-num">01</span>
+                        <div class="learning-text">
+                            <strong>Twig Template-Engine</strong>
+                            Wie Template-Vererbung funktioniert — Blöcke überschreiben,
+                            Variablen übergeben, wiederverwendbare Komponenten bauen.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">02</span>
+                        <div class="learning-text">
+                            <strong>Plugin-Architektur</strong>
+                            Wie ein Shopware Plugin aufgebaut ist —
+                            Konfiguration, Service-Registrierung,
+                            Storefront und Admin getrennt.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">03</span>
+                        <div class="learning-text">
+                            <strong>Arbeiten mit Tickets</strong>
+                            Anforderungen lesen, verstehen, umsetzen —
+                            sowohl intern als auch direkt für Kunden.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">04</span>
+                        <div class="learning-text">
+                            <strong>SCSS & CSS Variablen</strong>
+                            Wie man ein skalierbares Styling-System aufbaut
+                            das per Konfiguration anpassbar ist.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">05</span>
+                        <div class="learning-text">
+                            <strong>Unter Druck liefern</strong>
+                            Echte Deadlines, echte Kunden —
+                            der direkteste Weg um zu lernen
+                            wie professionelle Entwicklung funktioniert.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta" style="border-bottom: none;">
+            <h2 class="cta-title">
+                Zurück zum<br>
+                <em>Portfolio.</em>
+            </h2>
+            <a href="../index.html#projects" class="btn-primary">Alle Projekte →</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>Marcel Graf © 2026</span>
+        <span>Shopware · Projektdokumentation</span>
+    </footer>
+
+    <script src="../js/base.js"></script>
+    <script src="../js/shopware-info.js"></script>
+
+</body>
+
+</html>
