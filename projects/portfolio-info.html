@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Projektdokumentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/portfolio-info.css" />
+</head>
+
+<body>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Hintergrund — subtiles Linien-Muster -->
+    <svg id="bg-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <pattern id="line-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="60" x2="60" y2="0" stroke="#c9a84c" stroke-width="0.5" />
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#line-pattern)" />
+    </svg>
+
+    <!-- Nav -->
+    <nav id="mainNav">
+        <a href="../index.html" class="nav-logo">MG</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">← Portfolio</a></li>
+            <li><a href="../index.html#projects">Projekte</a></li>
+            <li><a href="../index.html#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="hero" style="opacity:1;transform:none;">
+            <p class="hero-label">01 — Projekt · Portfolio</p>
+            <h1 class="hero-title">
+                Portfolio<br>
+                <em>Website.</em>
+            </h1>
+            <p class="hero-sub">
+                Mehr als eine Visitenkarte — ein Lernprojekt das zeigt
+                wie modernes Web-Design ohne Frameworks funktioniert.
+            </p>
+            <div class="hero-cta">
+                <a href="../index.html" class="btn-primary">Portfolio ansehen →</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">3</span>
+                    <span class="hero-stat-label">Technologien</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">0</span>
+                    <span class="hero-stat-label">Frameworks</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">100%</span>
+                    <span class="hero-stat-label">Vanilla</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- WARUM -->
+        <section id="why">
+            <p class="section-label">01 — Motivation</p>
+            <h2 class="section-title">Warum dieses Projekt?</h2>
+            <div class="why-grid">
+                <div class="why-text">
+                    <p>
+                        In Bewerbungen zählt der erste Eindruck. Ein Link zu einer eigenen Website
+                        sagt mehr als jeder Lebenslauf — er zeigt dass man nicht nur über Entwicklung
+                        redet, sondern sie auch wirklich macht.
+                    </p>
+                    <p>
+                        Gleichzeitig wollte ich die Grundlagen wirklich verstehen. HTML, CSS und JavaScript
+                        ohne Framework, ohne Hilfsmittel — jede Zeile bewusst geschrieben und verstanden.
+                        Kein Copy-Paste, kein blindes Nachbauen.
+                    </p>
+                    <p>
+                        Das Ergebnis ist eine Seite die nicht nur als Portfolio dient, sondern auch
+                        als Fundament für alle weiteren Projekte — gemeinsame CSS Variablen, ein
+                        einheitliches Design-System, wiederverwendbare Komponenten.
+                    </p>
+                </div>
+                <div>
+                    <div class="why-highlight">
+                        <p>
+                            <em>"Ich entwickle digitalen Fortschritt —
+                                präzise, modern und mit einem Blick für Details."</em>
+                        </p>
+                    </div>
+                    <div style="margin-top: 40px;">
+                        <div class="why-text">
+                            <p>
+                                Als Entwickler in Ausbildung war es mir wichtig früh ein Projekt zu haben
+                                das ich zeigen kann — etwas das live ist, das funktioniert,
+                                und das meinen Stil widerspiegelt.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH STACK -->
+        <section id="tech">
+            <p class="section-label">02 — Tech Stack</p>
+            <h2 class="section-title">Was ich genutzt habe<br><em>und warum.</em></h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-category">Struktur</div>
+                    <div class="tech-name">HTML</div>
+                    <p class="tech-why">
+                        <strong>Semantisches Markup.</strong>
+                        Jedes Element hat einen Zweck —
+                        keine überflüssigen Divs, keine generischen Wrapper.
+                        Sauber, lesbar, zugänglich.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Design</div>
+                    <div class="tech-name">CSS</div>
+                    <p class="tech-why">
+                        <strong>Kein Framework, kein Tailwind.</strong>
+                        CSS Variables für ein konsistentes Design-System,
+                        Grid und Flexbox für das Layout,
+                        eigene Animationen mit IntersectionObserver.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Interaktion</div>
+                    <div class="tech-name">JavaScript</div>
+                    <p class="tech-why">
+                        <strong>Vanilla ES6+.</strong>
+                        Custom Cursor mit LERP-Interpolation,
+                        Scroll-Animationen, Nav-Effekte —
+                        alles ohne externe Dependencies.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Design System</div>
+                    <div class="tech-name">CSS Variables</div>
+                    <p class="tech-why">
+                        <strong>Einmal definiert, überall genutzt.</strong>
+                        Farben, Abstände und Schriften in
+                        einer zentralen <code>base.css</code> —
+                        alle Projektseiten teilen dasselbe System.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Hosting</div>
+                    <div class="tech-name">GitHub Pages</div>
+                    <p class="tech-why">
+                        <strong>Kostenlos, schnell, versioniert.</strong>
+                        Jeder Commit ist automatisch live —
+                        kein manuelles Hochladen, keine Server-Konfiguration.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Typografie</div>
+                    <div class="tech-name">Google Fonts</div>
+                    <p class="tech-why">
+                        <strong>Cormorant Garamond + DM Mono.</strong>
+                        Serif für Überschriften, Monospace für Fließtext —
+                        eine Kombination die gleichzeitig elegant
+                        und technisch wirkt.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESIGN ENTSCHEIDUNGEN -->
+        <section id="design">
+            <p class="section-label">03 — Design</p>
+            <h2 class="section-title">Bewusste Entscheidungen.</h2>
+            <div class="design-grid">
+                <div class="design-item">
+                    <div class="design-num">—</div>
+                    <div class="design-content">
+                        <div class="design-title">Schwarz, Weiß & Gold</div>
+                        <p class="design-text">
+                            Drei Farben, konsequent durchgezogen. Gold als einziger Akzent —
+                            sparsam eingesetzt, dadurch wirkungsvoll. Kein buntes Chaos,
+                            kein generisches Blau.
+                        </p>
+                    </div>
+                </div>
+                <div class="design-item">
+                    <div class="design-num">—</div>
+                    <div class="design-content">
+                        <div class="design-title">Custom Cursor</div>
+                        <p class="design-text">
+                            Ein kleiner goldener Punkt der dem Mauszeiger folgt —
+                            mit LERP-Interpolation für eine weiche, organische Bewegung.
+                            Ein Detail das man spürt bevor man es bemerkt.
+                        </p>
+                    </div>
+                </div>
+                <div class="design-item">
+                    <div class="design-num">—</div>
+                    <div class="design-content">
+                        <div class="design-title">Scroll-Animationen</div>
+                        <p class="design-text">
+                            Sektionen blenden sanft ein wenn sie in den Viewport kommen —
+                            via IntersectionObserver. Kein JavaScript-Framework,
+                            keine externe Animation Library.
+                        </p>
+                    </div>
+                </div>
+                <div class="design-item">
+                    <div class="design-num">—</div>
+                    <div class="design-content">
+                        <div class="design-title">Responsive Design</div>
+                        <p class="design-text">
+                            Ein Breakpoint bei 768px — Desktop und Mobil.
+                            Grid-Layouts die von mehrspaltigen zu einspaltigem
+                            Aufbau wechseln. Ohne CSS Framework, ohne Bootstrap.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAZIT -->
+        <section id="fazit">
+            <p class="section-label">04 — Reflexion</p>
+            <h2 class="section-title">Was ich mitgenommen habe.</h2>
+            <div class="fazit-grid">
+                <div class="fazit-text">
+                    <p>
+                        Die Portfolio-Seite war mein erster größerer Schritt in die
+                        professionelle Webentwicklung. Nicht das komplexeste Projekt —
+                        aber das Fundament auf dem alles andere aufbaut.
+                    </p>
+                    <p>
+                        Was ich unterschätzt hatte: wie viele Entscheidungen hinter
+                        einer simplen Seite stecken. Welche Schrift? Welches Layout?
+                        Wie animiere ich das? Jede Frage eine Lerngelegenheit.
+                    </p>
+                    <p>
+                        Das Ergebnis ist live, es funktioniert, und ich kann es
+                        jedem Arbeitgeber zeigen. Das ist mehr wert als jedes
+                        Tutorial das ich hätte nachbauen können.
+                    </p>
+                </div>
+                <div class="learnings">
+                    <div class="learning-item">
+                        <span class="learning-num">01</span>
+                        <div class="learning-text">
+                            <strong>CSS Variables & Design Systems</strong>
+                            Wie man ein konsistentes Design-System aufbaut das
+                            über mehrere Seiten und Projekte hinweg funktioniert.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">02</span>
+                        <div class="learning-text">
+                            <strong>IntersectionObserver API</strong>
+                            Wie man Scroll-Animationen ohne externe Library
+                            baut — performant und nativ im Browser.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">03</span>
+                        <div class="learning-text">
+                            <strong>LERP Interpolation</strong>
+                            Wie man mit einer simplen mathematischen Formel
+                            weiche, organische Bewegungen erzeugt.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">04</span>
+                        <div class="learning-text">
+                            <strong>CSS Grid & Flexbox</strong>
+                            Wann Grid, wann Flexbox — und wie beide zusammen
+                            komplexe Layouts ermöglichen.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">05</span>
+                        <div class="learning-text">
+                            <strong>GitHub Pages Deployment</strong>
+                            Wie man eine statische Website kostenlos
+                            und einfach live bringt.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta" style="border-bottom: none;">
+            <h2 class="cta-title">
+                Neugierig<br>
+                geworden? <em>Los.</em>
+            </h2>
+            <a href="../index.html" class="btn-primary">Portfolio ansehen →</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>Marcel Graf © 2026</span>
+        <span>Portfolio · Projektdokumentation</span>
+    </footer>
+
+    <script src="../js/base.js"></script>
+    <script src="../js/portfolio-info.js"></script>
+
+</body>
+
+</html>
