@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M365 Abschlussprojekt – Projektdokumentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/m365-info.css" />
+</head>
+
+<body>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Hintergrund — Hexagon Muster -->
+    <svg id="bg-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <pattern id="hex-pattern" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+                <polygon points="30,2 58,17 58,47 30,62 2,47 2,17" fill="none" stroke="#c9a84c" stroke-width="0.5" />
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hex-pattern)" />
+    </svg>
+
+    <!-- Nav -->
+    <nav id="mainNav">
+        <a href="../index.html" class="nav-logo">MG</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">← Portfolio</a></li>
+            <li><a href="../index.html#projects">Projekte</a></li>
+            <li><a href="../index.html#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="hero" style="opacity:1;transform:none;">
+            <p class="hero-label">02 — Abschlussprojekt · Microsoft 365</p>
+            <h1 class="hero-title">
+                Feuerwehr<br>
+                <em>Meldeapp.</em>
+            </h1>
+            <p class="hero-sub">
+                Eine einsatzkritische Anwendung für Betriebsfeuerwehren in KRITIS-Betrieben —
+                entwickelt von Grund auf, alleine, und live im echten Einsatz.
+            </p>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">6</span>
+                    <span class="hero-stat-label">Technologien</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">100%</span>
+                    <span class="hero-stat-label">Solo entwickelt</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">live</span>
+                    <span class="hero-stat-label">Im echten Einsatz</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEM -->
+        <section id="problem">
+            <p class="section-label">01 — Das Problem</p>
+            <h2 class="section-title">Was vorher nicht<br><em>funktionierte.</em></h2>
+            <div class="problem-grid">
+                <div class="problem-text">
+                    <p>
+                        In einem KRITIS-Betrieb — einem Betrieb der zur kritischen Infrastruktur
+                        gehört — gelten besonders strenge Sicherheitsanforderungen. Jede Person
+                        auf dem Gelände muss erfasst sein. Im Notfall muss die Pforte wissen
+                        wer sich wo befindet.
+                    </p>
+                    <p>
+                        Das Problem: Feuerwehrangehörige rennen im Katastrophenfall direkt
+                        zum Einsatzort — sie haben keine Zeit erst zur Pforte zu gehen und
+                        sich händisch einzutragen.
+                    </p>
+                    <p>
+                        Die Konsequenz: Diese Personen galten für die Pforte offiziell
+                        als vermisst. Ein inakzeptabler Zustand in einem sicherheitskritischen Umfeld.
+                    </p>
+                </div>
+                <div class="problem-visual">
+                    <div class="problem-before">
+                        <div class="pb-label">Vorher</div>
+                        <div class="pb-item red">
+                            <span class="pb-icon">✕</span>
+                            <span>Feuerwehrleute händisch eintragen</span>
+                        </div>
+                        <div class="pb-item red">
+                            <span class="pb-icon">✕</span>
+                            <span>Keine Zeit zur Pforte im Einsatz</span>
+                        </div>
+                        <div class="pb-item red">
+                            <span class="pb-icon">✕</span>
+                            <span>Einsatzkräfte gelten als vermisst</span>
+                        </div>
+                        <div class="pb-item red">
+                            <span class="pb-icon">✕</span>
+                            <span>Kein Überblick über aktive Kräfte</span>
+                        </div>
+                    </div>
+                    <div class="problem-after">
+                        <div class="pb-label">Nachher</div>
+                        <div class="pb-item green">
+                            <span class="pb-icon">✓</span>
+                            <span>QR-Code Scan an der Feuerwehrweste</span>
+                        </div>
+                        <div class="pb-item green">
+                            <span class="pb-icon">✓</span>
+                            <span>Automatische Meldung durch Einsatzleiter</span>
+                        </div>
+                        <div class="pb-item green">
+                            <span class="pb-icon">✓</span>
+                            <span>Live-Übersicht für Pforte & Mitarbeiter</span>
+                        </div>
+                        <div class="pb-item green">
+                            <span class="pb-icon">✓</span>
+                            <span>Offline-fähig mit automatischer Synchronisierung</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LÖSUNG -->
+        <section id="solution">
+            <p class="section-label">02 — Die Lösung</p>
+            <h2 class="section-title">Wie die App<br><em>funktioniert.</em></h2>
+            <div class="flow-grid">
+                <div class="flow-item">
+                    <div class="flow-num">01</div>
+                    <div class="flow-content">
+                        <div class="flow-title">QR-Code Scan</div>
+                        <p class="flow-desc">
+                            Jede Feuerwehrweste trägt einen QR-Code.
+                            Der Einsatzleiter scannt diesen mit der App —
+                            die Feuerwehrkraft ist damit offiziell gemeldet.
+                        </p>
+                    </div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-num">02</div>
+                    <div class="flow-content">
+                        <div class="flow-title">Authentifizierung</div>
+                        <p class="flow-desc">
+                            Nur berechtigte Einsatzleiter dürfen die App nutzen.
+                            Entra ID prüft automatisch die Rolle — bei Berechtigung
+                            wird der Nutzer sofort eingeloggt und der Einsatz beginnt.
+                        </p>
+                    </div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-num">03</div>
+                    <div class="flow-content">
+                        <div class="flow-title">Live-Anzeige</div>
+                        <p class="flow-desc">
+                            Alle gemeldeten Einsatzkräfte erscheinen sofort
+                            in der SharePoint Liste — farblich nach Rang sortiert.
+                            Pforte und Mitarbeiter sehen den aktuellen Stand in Echtzeit.
+                        </p>
+                    </div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-num">04</div>
+                    <div class="flow-content">
+                        <div class="flow-title">Offline-Modus</div>
+                        <p class="flow-desc">
+                            Fällt das Netz aus, läuft die App weiter über Dataverse.
+                            Sobald die Verbindung wiederhergestellt ist, synchronisiert
+                            ein Power Automate Flow automatisch alle Daten nach.
+                        </p>
+                    </div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-num">05</div>
+                    <div class="flow-content">
+                        <div class="flow-title">Einsatzabschluss</div>
+                        <p class="flow-desc">
+                            Nach Abschluss des Einsatzes generiert ein Flow automatisch
+                            ein PDF der gesamten Meldungsliste — und legt es im
+                            Protokoll-Ordner ab für spätere Nachvollziehbarkeit.
+                        </p>
+                    </div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-num">06</div>
+                    <div class="flow-content">
+                        <div class="flow-title">Berechtigungen</div>
+                        <p class="flow-desc">
+                            Die Sichtbarkeit der Live-Liste ist konfigurierbar —
+                            die Firma entscheidet selbst wer die Meldungen sehen darf.
+                            Standardmäßig alle Mitarbeiter mit Firmenaccount.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH -->
+        <section id="tech">
+            <p class="section-label">03 — Tech Stack</p>
+            <h2 class="section-title">Was ich genutzt habe<br><em>und warum.</em></h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-category">App · Frontend</div>
+                    <div class="tech-name">PowerApps</div>
+                    <p class="tech-why">
+                        <strong>Blanko Canvas App — komplett selbst aufgebaut.</strong>
+                        Kein Template, keine Vorlage. Jedes Element, jede Logik,
+                        jedes Screen-Layout von Grund auf entwickelt.
+                        Inklusive Offline-Unterstützung über Dataverse.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Automatisierung</div>
+                    <div class="tech-name">Power Automate</div>
+                    <p class="tech-why">
+                        <strong>Zwei kritische Flows.</strong>
+                        Flow 1: Offline-Nachsynchronisierung — wird getriggert
+                        sobald die Internetverbindung wiederhergestellt ist.
+                        Flow 2: PDF-Generierung und Ablage nach Einsatzabschluss.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Offline · Speicher</div>
+                    <div class="tech-name">Dataverse</div>
+                    <p class="tech-why">
+                        <strong>Offline-Datenspeicher der App.</strong>
+                        Dataverse ermöglicht lokales Speichern ohne Internetverbindung —
+                        die Grundlage für den Offline-Modus.
+                        Bei Reconnect werden alle Daten synchronisiert.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Live · Protokoll</div>
+                    <div class="tech-name">SharePoint</div>
+                    <p class="tech-why">
+                        <strong>Live-Ansicht und Protokollierung.</strong>
+                        Aktive Meldungen erscheinen in Echtzeit in der SharePoint Liste —
+                        sichtbar für Pforte und Mitarbeiter.
+                        Abgeschlossene Einsätze werden als PDF archiviert.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Authentifizierung</div>
+                    <div class="tech-name">Entra ID</div>
+                    <p class="tech-why">
+                        <strong>Rollen, Rechte und Nutzeridentität.</strong>
+                        Prüft ob der Nutzer Einsatzleiter ist — nur dann startet die App.
+                        Liefert vollständige Mitarbeiterprofile für die Meldungsliste,
+                        farbliche Darstellung nach Rang.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-category">Aufgaben · Struktur</div>
+                    <div class="tech-name">Lists</div>
+                    <p class="tech-why">
+                        <strong>Strukturierte Datenhaltung.</strong>
+                        Microsoft Lists als strukturierte Basis
+                        für Konfigurationsdaten und Einsatzlisten —
+                        eng verknüpft mit SharePoint und Power Automate.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HERAUSFORDERUNG -->
+        <section id="challenge">
+            <p class="section-label">04 — Herausforderungen</p>
+            <h2 class="section-title">Was mich wirklich<br><em>gefordert hat.</em></h2>
+            <div class="challenge-grid">
+                <div class="challenge-item">
+                    <div class="challenge-title">Offline-Synchronisierung</div>
+                    <p class="challenge-desc">
+                        Die größte technische Herausforderung des Projekts.
+                        Daten lokal in Dataverse halten, den Reconnect-Moment erkennen,
+                        und dann sicher synchronisieren ohne Datenverlust —
+                        das war komplex, aber das interessanteste Problem zu lösen.
+                    </p>
+                </div>
+                <div class="challenge-item">
+                    <div class="challenge-title">Responsive Design in M365</div>
+                    <p class="challenge-desc">
+                        Im Gegensatz zu normalem Web-Development gibt es in PowerApps
+                        kein flexibles CSS — jedes Element muss manuell positioniert werden.
+                        Responsive Layouts zu bauen die auf verschiedenen Geräten
+                        funktionieren war eine eigene Disziplin.
+                    </p>
+                </div>
+                <div class="challenge-item">
+                    <div class="challenge-title">Komplett alleine</div>
+                    <p class="challenge-desc">
+                        Kein Team, keine Hilfe, keine Vorlage.
+                        Von der Konzeption über die Datenbankstruktur bis zur
+                        finalen App — jede Entscheidung selbst getroffen,
+                        jedes Problem selbst gelöst.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAZIT -->
+        <section id="fazit">
+            <p class="section-label">05 — Reflexion</p>
+            <h2 class="section-title">Was ich mitgenommen habe.</h2>
+            <div class="fazit-grid">
+                <div class="fazit-text">
+                    <p>
+                        Dieses Projekt war das erste das ich komplett alleine
+                        konzipiert und umgesetzt habe — ohne Vorlage, ohne Hilfe,
+                        mit echten Sicherheitsanforderungen und echten Nutzern.
+                    </p>
+                    <p>
+                        Was mich am meisten überrascht hat: wie anders die
+                        Entwicklung in der M365-Welt ist. Kein Code im klassischen
+                        Sinne, aber trotzdem komplexe Logik, Datenstrukturen
+                        und Automatisierungen.
+                    </p>
+                    <p>
+                        Das Ergebnis ist live. Es läuft in einem echten
+                        KRITIS-Betrieb. Das ist der beste Beweis
+                        dass es funktioniert.
+                    </p>
+                </div>
+                <div class="learnings">
+                    <div class="learning-item">
+                        <span class="learning-num">01</span>
+                        <div class="learning-text">
+                            <strong>Offline-First Architektur</strong>
+                            Wie man eine App konzipiert die auch ohne
+                            Internetverbindung zuverlässig funktioniert
+                            und sicher synchronisiert.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">02</span>
+                        <div class="learning-text">
+                            <strong>Power Automate Flows</strong>
+                            Komplexe Automatisierungen mit Triggern,
+                            Bedingungen und Aktionen — inklusive
+                            PDF-Generierung und Dateiablage.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">03</span>
+                        <div class="learning-text">
+                            <strong>Rollenbasierte Authentifizierung</strong>
+                            Wie Entra ID für Zugriffssteuerung genutzt wird —
+                            automatischer Login, Rollenprüfung und
+                            personalisierte Darstellung.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">04</span>
+                        <div class="learning-text">
+                            <strong>M365 Ökosystem</strong>
+                            Wie PowerApps, Power Automate, SharePoint,
+                            Dataverse, Entra ID und Lists zusammenspielen —
+                            als integriertes System.
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <span class="learning-num">05</span>
+                        <div class="learning-text">
+                            <strong>Sicherheitskritische Anforderungen</strong>
+                            Software für einen KRITIS-Betrieb zu entwickeln —
+                            wo Fehler echte Konsequenzen haben.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta" style="border-bottom: none;">
+            <h2 class="cta-title">
+                Zurück zum<br>
+                <em>Portfolio.</em>
+            </h2>
+            <a href="../index.html#projects" class="btn-primary">Alle Projekte →</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>Marcel Graf © 2026</span>
+        <span>M365 Abschlussprojekt · Dokumentation</span>
+    </footer>
+
+    <script src="../js/base.js"></script>
+    <script src="../js/m365-info.js"></script>
+
+</body>
+
+</html>
